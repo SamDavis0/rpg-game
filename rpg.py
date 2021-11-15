@@ -234,7 +234,6 @@ class Shop(object):
 
 class Combat(object):
     def mid_battle_menu():
-        print("\n")
         print('~' * 40)
         print(f"What do you want to do?\n1. Slap him.\n2. Really? Nothing?\n3. Run!")
         print("> ", end=' ')
@@ -296,6 +295,7 @@ class Instance(object):
             if answer == 1:
                 Combat.battle_menu(hero, enemy_list[random.randint(0, 5)])
             elif answer == 2:
+                print('~' * 40)
                 print("Okay nap time!")
                 pass
             elif answer == 3:
@@ -313,11 +313,11 @@ class Instance(object):
 if __name__ == "__main__":
     hero = Hero("Bobby", 100, 10, 0)
     medic = Medic("Priest Boi", 100, 5, 150)
-    thief = Pickpocket("Thief", 100, 5, 500)
+    thief = Pickpocket("Slobby Rob", 100, 5, 500)
     goblin = Goblin("Cheese", 100, 10, 100)
-    gremlin = Gremlin("Gremlin", 100, 10, 50)
-    zombie = Zombie("Zombie", 100, 10, 200)
-    shadow = Shadow("Shadow", 1, 10, 100)
+    gremlin = Gremlin("Taco", 100, 10, 50)
+    zombie = Zombie("Tim", 100, 10, 200)
+    shadow = Shadow("Lucky", 1, 10, 100)
 
     enemy_list = [medic, thief, goblin, gremlin, zombie, shadow]
 
